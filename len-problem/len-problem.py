@@ -1,9 +1,9 @@
 def solution(A):
-    amp= max(A) - min(A)
+    if len(A) > 2:
 
-    return amp 
+        amp = max(A) - min(A)
 
-print (solution([1, 2])) #3
+        return amp
 
 
-
+print(solution([10, 2, 44, 15, 39, 20]))  # 3

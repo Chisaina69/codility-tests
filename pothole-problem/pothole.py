@@ -1,21 +1,20 @@
-def solution(R):
-    total_list = []
-    joined_holes = []
-    for i in R:
-        if i != 0:
-            joined_holes.append(i)
-        else:
-            joined_holes = []
-        if i not in total_list:
-            total_list.append(joined_holes)
-    max_list = []
-    for i in total_list:
-        if(len(i) > 0):
-            max_list.append((len(i)) * max(i))
-        else:
-            max_list.append(0)
-            print(max_list)
-            print(max(max_list))
+def solution(S):
+    n = len(S)
+    p = 0
+    current_segment = 0
+    
+    for i in range(n):
+        if S[i] == "X":
+            current_segment += 1
+            if current_segment == 3:
+                p += 1
+                current_segment = 0
+    
+    if current_segment > 0:
+        p += 1
+    
+    return p
+
 
                                         
                 

@@ -1,4 +1,4 @@
-def solution(S):
+def alsphat(S):
     n = len(S)
     p = 0
     current_segment = 0
